@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* Alt+Z - Перенос на другую строку */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: inherit;
+}
+
+button {
+    display: inline-block;
+}
+
+a, a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+a, span, label, textarea, button, input {
+    display: inline-block;
+    font-family: inherit;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+:root{
+    --playfair: 'Playfair Display';
+    --noto-sans: 'Noto Sans';
+    --container-width: 1170px; /*К основному телу-контейнеру нужно добавлять по 16px для получения лучшего отображения элементов при уменьшении экрана*/
+    --container-padding: 16px;
+}
+
+.body {
+    font-family: var(--playfair);
+    font-weight: 400;
+}
+
+.container {
+    width: calc(var(--container-width)+(var(--container-padding)*2));
+    padding: 0 var(--container-padding);
+    margin: 0 auto;  /*нужно указывать тут 0 для того чтобы margin auto работал только по горизонтали*/
+    text-align: center;
+}
+
+.posts {
+    padding: 90px 0;
+}
+
+.posts-header {
+    text-align: center;
+}
+
+.posts-header > * + * {
+    margin-top: 3px;
+}
+
+.title-2 {
+    font-size: 42px;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.subtitle {
+    color: #999999;
+    font-size: 14px;
+    font-family: var(--noto-sans);
+    text-transform: uppercase;
+}
+
+.posts-list{
+    padding: 86px 0 76px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+    justify-content: center;
+    text-align: left;
+}
+
+.post {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 570px;
+}
+
+.post-image {
+    width: 170px;
+    height: 170px;
+    background: #000;
+    flex-shrink: 0; /*Говорит блоку заполнять согласно входным данным*/
+}
+
+.post-content > * + * {
+    margin-top: 10px;
+}
+
+/* .post-content {
+    width: 370px;
+} */
+
+.title-3 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.post-content .title-3 {
+    padding-right: 70px;
+}
+
+.post-text {
+    color: #777;
+    font-family: var(--noto-sans);
+    font-size: 14px;
+}
+
+.post-link {
+    font-size: 16px;
+    display: inline-flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.posts-button {
+    font-size: 16px;
+    padding: 10px 51px;
+    align-items: center;
+    border: 1px solid #F72464;
+    border-radius: 4px;
+    background: white;
+    color: #777;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* footer */
+
+.footer {
+    background-color: #000;
+    padding: 30px 0;
+    color: white;
+}
+
+.footer-link {
+    color: inherit;
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+.footer-link:hover {
+    color: tan ;
+}
+
+.footer-socials {
+    margin: 25px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    column-gap: 31px;
+    
+}
+
+.social-link {
+    transition: all 0.3s ease-in;
+}
+
+.social-link:hover {
+    scale: 1.2;
+}
+
+.footer-text {
+    color: #999999;
+    font-size: 14px;
+    font-style: var(--noto-sans);
+}
